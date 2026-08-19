@@ -168,7 +168,15 @@
 <span class="material-symbols-outlined" data-icon="close">close</span>
 </button>
 </div>
-<div id="cart-items-container" class="flex-grow overflow-y-auto space-y-3 pr-2 custom-scrollbar"></div>
+<nav class="flex-grow flex flex-col space-y-4">
+<a class="text-primary font-headline-md text-headline-md" href="#">Categorías</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline-md text-headline-md" href="#">Ofertas</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline-md text-headline-md" href="#">Productores</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline-md text-headline-md" href="#">Nosotros</a>
+<a class="text-tertiary flex items-center gap-2 font-headline-md text-headline-md" href="opciones_diseno.html">
+    <span class="material-symbols-outlined" style="font-size: 24px;">palette</span> Catálogo de Diseños
+</a>
+</nav>
 </aside>
 
 <!-- Main Content -->
@@ -307,24 +315,7 @@
 </button>
 </div>
 <!-- Navigation Tabs (from JSON) -->
-<nav class="flex-grow space-y-2">
-<a class="flex items-center gap-3 bg-secondary-container text-on-secondary-container rounded-xl p-3" href="#">
-<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-                Mi Carrito
-            </a>
-<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl p-3 transition-colors hover:bg-surface-container-highest transition-all" href="#">
-<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
-                Mis Pedidos
-            </a>
-<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl p-3 transition-colors hover:bg-surface-container-highest transition-all" href="#">
-<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
-                Direcciones
-            </a>
-<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl p-3 transition-colors hover:bg-surface-container-highest transition-all" href="#">
-<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
-                Favoritos
-            </a>
-</nav>
+<div id="cart-items-container" class="flex-grow overflow-y-auto space-y-3 pr-2 custom-scrollbar"></div>
 <div class="mt-auto pt-4 border-t border-outline-variant/20">
 <button id="checkout-btn" class="w-full bg-tertiary text-on-tertiary font-label-md text-label-md py-3 rounded-lg shadow-md hover:bg-tertiary-container transition-colors">
                 Finalizar Compra ($0 CLP)
