@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARTISAN Gourmet Market - Frutos de la Costa</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Epilogue & JetBrains Mono & Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#334f00",
+                    "on-surface-variant": "#d0c5af",
+                    "tertiary-fixed": "#e2e2e5",
+                    "on-error-container": "#ffdad6",
+                    "secondary": "#9ddf2e",
+                    "secondary-container": "#83c300",
+                    "primary-container": "#d4af37",
+                    "outline-variant": "#4d4635",
+                    "primary": "#f2ca50",
+                    "on-secondary-container": "#304b00",
+                    "on-surface": "#e3e2e3",
+                    "secondary-fixed-dim": "#98da27",
+                    "on-primary-fixed": "#241a00",
+                    "inverse-surface": "#e3e2e3",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-error": "#690005",
+                    "error": "#ffb4ab",
+                    "secondary-fixed": "#b2f746",
+                    "on-tertiary-fixed-variant": "#454749",
+                    "surface-container-high": "#292a2b",
+                    "on-secondary": "#213600",
+                    "on-secondary-fixed": "#121f00",
+                    "surface-container-lowest": "#0d0e0f",
+                    "on-tertiary-fixed": "#1a1c1e",
+                    "on-background": "#e3e2e3",
+                    "surface-bright": "#39393a",
+                    "surface-tint": "#e9c349",
+                    "on-primary": "#3c2f00",
+                    "surface-dim": "#121314",
+                    "tertiary": "#ceced1",
+                    "surface-container-highest": "#343536",
+                    "primary-fixed": "#ffe088",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface": "#121314",
+                    "inverse-on-surface": "#303031",
+                    "outline": "#99907c",
+                    "surface-container-low": "#1b1c1d",
+                    "background": "#121314",
+                    "on-tertiary-container": "#444547",
+                    "inverse-primary": "#735c00",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#c6c6c9",
+                    "surface-container": "#1f2021",
+                    "on-primary-container": "#554300",
+                    "on-tertiary": "#2f3133",
+                    "tertiary-container": "#b2b3b5",
+                    "surface-variant": "#343536"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "Epilogue"
+                    ],
+                    "label-caps": [
+                            "JetBrains Mono"
+                    ],
+                    "headline-md": [
+                            "Epilogue"
+                    ],
+                    "headline-lg-mobile": [
+                            "Epilogue"
+                    ],
+                    "display-lg": [
+                            "Epilogue"
+                    ],
+                    "body-md": [
+                            "Manrope"
+                    ],
+                    "body-lg": [
+                            "Manrope"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "72px",
+                            {
+                                    "lineHeight": "80px",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        /* Hide scrollbar for clean aesthetic */
+        ::-webkit-scrollbar { display: none; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Subtle glow utilities */
+        .glass-panel {
+            background: rgba(18, 19, 20, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: inset 0 1px 0 rgba(242, 202, 80, 0.1);
+        }
+        
+        .card-glow:hover {
+            box-shadow: inset 0 0 0 1px rgba(242, 202, 80, 0.4);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-outline-variant/10">
+<div class="flex justify-between items-center h-24 px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary tracking-tighter" href="#">
+                ARTISAN
+            </a>
+<!-- Navigation Links -->
+<ul class="hidden md:flex gap-gutter font-headline-md text-headline-md tracking-tight">
+<li class="cursor-pointer active:scale-95 transition-transform hover:text-primary transition-all duration-300">
+<a class="text-primary dark:text-primary font-bold border-b-2 border-primary pb-1" href="#">Seasonal</a>
+</li>
+<li class="cursor-pointer active:scale-95 transition-transform hover:text-primary transition-all duration-300">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Artisanal</a>
+</li>
+<li class="cursor-pointer active:scale-95 transition-transform hover:text-primary transition-all duration-300">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Pantry</a>
+</li>
+<li class="cursor-pointer active:scale-95 transition-transform hover:text-primary transition-all duration-300">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Curated</a>
+</li>
+</ul>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-6">
+<button class="text-primary dark:text-primary hover:text-primary transition-all duration-300 cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+</button>
+<button class="text-primary dark:text-primary hover:text-primary transition-all duration-300 cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 min-h-screen">
+<!-- Hero Section: Elegancia Ancestral -->
+<section class="relative w-full h-[819px] flex items-center justify-center px-margin-desktop mb-[80px]">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="bg-cover bg-center w-full h-full opacity-60" data-alt="A dramatic, high-end macro photograph of dark, textured ancestral coastal ingredients like sea salt crystals and kelp on a slate surface. Deep shadows, stark white highlights, and subtle gold rim lighting create a moody, luxurious culinary atmosphere. High fidelity, minimalist dark-mode aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADV5aNIwNyLGNN_65UMDLBYXV9Laf5WQwfGLqBP2x_WrlAkgXxUV6PheI2GMaCrxifQd4H6rLq8Cuz8VjyLgePvc8BGjm-awIX2r9WcMSOzLlU9rYzPt5OBOeBlkAdUo8SYiUT26Q7fpji5oMui43d2-fDJiAeM0bCaRal5M41TvGOUYVrvRrNzJTvQKX2TS9QLdhFl4nLfodlAvsA5QRhUPlrLZo2ef8E-pH3gIPiULwIsaYlnbf3jA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max w-full mx-auto flex flex-col items-start gap-6">
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-4 py-2 rounded-full uppercase tracking-widest backdrop-blur-sm bg-surface/30">Cosecha de Otoño</span>
+<h1 class="font-display-lg text-display-lg text-on-surface max-w-3xl leading-tight">Elegancia Ancestral de la Costa</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8">Ingredientes selectos recolectados a mano en las profundidades del litoral. Una sinfonía de texturas crudas y sabores puros para la alta cocina.</p>
+<button class="bg-secondary text-on-secondary px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary-container transition-colors active:scale-95 flex items-center gap-2">
+                    Explorar Colección <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Colecciones Curadas (Bento Grid) -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-[120px]">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Colecciones Curadas</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Selecciones exclusivas para paladares exigentes.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-unit h-[600px]">
+<!-- Large Feature -->
+<div class="md:col-span-2 relative group overflow-hidden bg-surface-container-low flex flex-col justify-end p-8 card-glow transition-all duration-500 cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-70" data-alt="Overhead view of an exquisite dark wood board displaying artisanal cured fish, rare seaweeds, and glowing amber olive oil in small ceramic tasting dishes. Moody dramatic lighting, deep shadows, high-end culinary magazine style, dark mode aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD051Esrl-wAhGrrpnZBLPXaXZaqYtJ4vAGWOVkMxDnkKmQw7jL3w4QOFtiH2TUYfBbubuuWepzUSCGIMBk8UrrH3UcHJ_8KNbg6d0C5R5DXohy-I46xb-aJ7vDlfEHZok_MUEDmpyKGswF9U84SVcJdlalG8-hUNRxbSW9b4cmhYpHV2hmqLUrIoUCLGIlA4f29ngy4iW__QLlbd_o3okRStL-092ny6AxoI82DftEH0YdHRpr4akhhw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent"></div>
+<div class="relative z-10">
+<span class="font-label-caps text-label-caps text-primary mb-3 block">Edición Limitada</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Reserva del Mar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Una selección curada de ahumados artesanales y sales de roca costeras.</p>
+</div>
+</div>
+<!-- Vertical Stack -->
+<div class="flex flex-col gap-unit">
+<div class="flex-1 relative group overflow-hidden bg-surface-container-low flex flex-col justify-end p-6 card-glow transition-all duration-500 cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-70" data-alt="Close up of vibrant dark purple and green artisanal sea asparagus and rare herbs on a rough dark stone plate. Spotlit with warm golden light against a pitch-black background. Luxury gastronomy aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCb13giRZIM4F93igriJwBWE-Yeb-YFg-vMF0wDQpgdJ36DpZwqj1XmcoLGGohKFM-DiETvZXTBrde3UlivBGt0muqCnpP4eEF-bQmXyeP9pVJCBrGkIVNxdTAAMNe6ovgCrasVSp4DzLuq3QqTTi3Lumyuuj1nC1sChGFBc__VEXC_yAq2kYz3qt68kgixjmddh9uLXMvLOhgVJOJSGpZ6hatx-c2WJgJb_Iy818TUJHgbwLdGGgu6A')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-on-surface">Botánica Litoral</h3>
+</div>
+</div>
+<div class="flex-1 relative group overflow-hidden bg-surface-container-low flex flex-col justify-end p-6 card-glow transition-all duration-500 cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-70" data-alt="Minimalist composition of high-end glass jars containing golden and dark amber artisanal preserves, glowing softly against a dark slate background. Sophisticated lighting, shadow play." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0NNdJjU6jcbDN0go3AieSguPC7-TpG53_YgrckR4Wi1a-jPDXT8-Ur6aeISbCk23k5km0OUCKe_quD3HZ5D0nhzwwe5fS6wdxLOJi3mpPDF2v-vzJfxJOXTEvae__2tY8opzme6P3xrO-tvAhNwLz1xX9BzCAfGAMXI2oJU8tlSGr0n31lJqscHxViQ34kwDT7GxYbMLSdIVQECZTE11BE7MJOFCXU5CgqR1r2JqfEJc5eeqZth_dVw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-on-surface">Despensa Esencial</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Productos Destacados -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-[160px]">
+<div class="flex justify-between items-center mb-12 border-b border-outline-variant/20 pb-6">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Productos Destacados</h2>
+<a class="font-label-caps text-label-caps text-primary hover:text-secondary transition-colors uppercase tracking-widest flex items-center gap-2" href="#">
+                    Ver Todos <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Product 1 -->
+<div class="group flex flex-col gap-4">
+<div class="relative aspect-square bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105 mix-blend-luminosity hover:mix-blend-normal" data-alt="A single, perfectly lit jar of artisanal sea salt flakes sitting on a matte black pedestal. Intense golden spotlight highlights the texture of the salt against a deep dark background. Luxury minimalist product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACH80v3MWFNdQXgpp-DVVXoZzNd02S_ZSclYrJeRZYK6XeHYKNdVez24CsZCBVD6nlijR2VQ5isf3EKbrPcUZaSTqFf2A5rY04goRyEtvO47iSJMYjSDYdp0Fn2SRTOqFLnBBsYdMlpL5IFHU98y_3LEdaL1-xNDCBHygjIBRWY9XnK9JGsJqEP4XXH59Cr5oFMT_QTj_mUmo5s4gSv7CNX1Zr1oW9LsCTvBp8EDQ_fe7E153IJDQElw"/>
+<div class="absolute top-4 left-4 bg-surface/80 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-on-surface">
+                            Orgánico
+                        </div>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-body-lg text-body-lg text-on-surface">Sal de Mar Ahumada Ancestral</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Frasco 250g</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-headline-md text-headline-md text-primary">$18.500 <span class="text-sm font-normal text-on-surface-variant">CLP</span></span>
+<button class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group flex flex-col gap-4">
+<div class="relative aspect-square bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105 mix-blend-luminosity hover:mix-blend-normal" data-alt="Elegant tall bottle of dark amber infused olive oil, backlit to show its glowing color. Resting on dark stone. Minimalist, moody, high-contrast luxury food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC094q0qd5AmTNrYN3MYwqdEdOpm-mUtIzsHXi4EhDI1N0vYUp_JyP8GFzxMk2Yr6n_1xoLOxvs-1C5TBDrQD_H-ccfq6lsfylLSOJeb8UmI4T9txjATiRiUAqsThGvbJRXz4bBMmPRECddy-vBuJIUzIUG_wiodHRPhta0omeVYQzyGONSXodMW-nhmfymrtnwv8vl6o4cyo6GYaw__RAPxYcqCzVFz4VeZoKXFPseXur6T7tpllvRwg"/>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-body-lg text-body-lg text-on-surface">Aceite de Oliva Infusión Kelp</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Botella 500ml</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-headline-md text-headline-md text-primary">$32.000 <span class="text-sm font-normal text-on-surface-variant">CLP</span></span>
+<button class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group flex flex-col gap-4">
+<div class="relative aspect-square bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105 mix-blend-luminosity hover:mix-blend-normal" data-alt="Close up macro shot of dried wild coastal mushrooms resting on dark slate. Warm, directional light creates deep shadows and highlights intricate textures. Dark mode gourmet aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCH3Jduj4gsZHasdl2VhaKLniBEYyLU-eQeKHO8hrWT9Srw2vcHybyqHiSLsL9U_TgyabW2MwOeWgkWS8XuBuqM9DkKBQvVrMY1wMG-D11A2pkQ-IfM6EW0cd-vG1CmWkc17PbOZzWYfwg978addafB-IeXKLOsiX4U3De_LfQ3Bdt9cfcrp9NiwrQ8yqSnUKbzKEF7mGulHGRviH9v68Jz4YY8Qz5r0Ytq80jblYVtDuzPLgJejP6cA"/>
+<div class="absolute top-4 left-4 bg-surface/80 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-on-surface">
+                            Salvaje
+                        </div>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-body-lg text-body-lg text-on-surface">Setas Silvestres Deshidratadas</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Lata 100g</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-headline-md text-headline-md text-primary">$24.900 <span class="text-sm font-normal text-on-surface-variant">CLP</span></span>
+<button class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group flex flex-col gap-4">
+<div class="relative aspect-square bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105 mix-blend-luminosity hover:mix-blend-normal" data-alt="A small, matte black ceramic pot containing dark caviar-like pearls of balsamic vinegar. Illuminated by a sharp streak of light against a completely dark background. High-end culinary luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6_ARTn7JnnN6mW0ywf0h-WLNoEotmTRJoKiCcatNPaCH2QfjXRMqWG_9uxkolGjbcV4Ns6EgI-CzfbUXDKe3wF5ulTzUdhRHBUvIvrBkZPvj6ywr8TgAIugzF8O6ZcfyrnCRRN7_-ZT-nmiYzWugIg6ywX0w7aNXva9I26bm2paKtoK0rIoa3iF2m8Gbc1Y3xIjjZK0QuRY2v5WcsGOJ9Skfkjt6gh3EMgL4pr8JfR3ZqE9biBfmwng"/>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-body-lg text-body-lg text-on-surface">Perlas de Vinagre Balsámico</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Tarro 50g</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-headline-md text-headline-md text-primary">$15.000 <span class="text-sm font-normal text-on-surface-variant">CLP</span></span>
+<button class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full pt-20 pb-10 bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="flex flex-col items-center gap-8 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-label-caps text-label-caps text-primary tracking-widest">
+                ARTISAN GOURMET MARKET
+            </div>
+<ul class="flex flex-wrap justify-center gap-6 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors opacity-100 hover:opacity-80" href="#">Provenance</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors opacity-100 hover:opacity-80" href="#">Shipping</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors opacity-100 hover:opacity-80" href="#">Legal</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors opacity-100 hover:opacity-80" href="#">Privacy</a></li>
+</ul>
+<div class="text-on-surface dark:text-on-surface font-body-md text-body-md mt-4 opacity-50">
+                © 2024 ARTISAN GOURMET MARKET. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+
+<div style="text-align: center; padding: 20px; background-color: #f1f5f9; color: #475569; font-family: 'Inter', sans-serif; font-size: 14px; border-top: 1px solid #e2e8f0; margin-top: 40px;">
+    <strong>Demo realizada por <a href="https://ppvsoluciones.cl" target="_blank" style="color: #3b82f6; text-decoration: none;">ppvsoluciones.cl</a></strong>
+</div>
+
+
+<a href="opciones_diseno.html" style="position: fixed; bottom: 80px; left: 20px; background: #0f172a; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; z-index: 9999; font-family: 'Inter', sans-serif; font-weight: 600; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 8px;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Volver al Menú
+</a>
+
+</body></html>

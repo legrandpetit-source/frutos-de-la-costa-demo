@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Frutos de la Costa - Categorías</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#00497a",
+                        "outline": "#717781",
+                        "on-tertiary-container": "#ffbfad",
+                        "tertiary-container": "#a42b00",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#abd2ff",
+                        "on-surface-variant": "#414750",
+                        "secondary-fixed-dim": "#9ccee4",
+                        "on-secondary-fixed-variant": "#154d5f",
+                        "secondary-container": "#b5e7fe",
+                        "inverse-surface": "#2d3133",
+                        "surface-dim": "#d8dadc",
+                        "tertiary": "#7b1e00",
+                        "surface-container": "#eceef0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#001f29",
+                        "surface-container-highest": "#e0e3e5",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "secondary": "#326578",
+                        "tertiary-fixed": "#ffdbd1",
+                        "tertiary-fixed-dim": "#ffb5a0",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed": "#001d35",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#9ccaff",
+                        "surface-tint": "#12629d",
+                        "on-secondary-container": "#37697d",
+                        "on-tertiary-fixed-variant": "#862200",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "background": "#f7f9fb",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed": "#bbe9ff",
+                        "inverse-primary": "#9ccaff",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-fixed": "#3b0900",
+                        "surface-variant": "#e0e3e5",
+                        "primary-fixed": "#d0e4ff",
+                        "primary-container": "#005b96",
+                        "primary": "#004370",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#c1c7d1",
+                        "on-surface": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "48px",
+                        "sm": "12px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "price-tag": ["Plus Jakarta Sans"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "price-tag": ["20px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .shadow-ambient {
+            box-shadow: 0 4px 12px rgba(0, 91, 150, 0.08);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased pb-24 md:pb-0 pt-[72px]">
+<!-- TopNavBar (Web) -->
+<nav class="hidden md:flex fixed top-0 w-full z-50 bg-surface/80 dark:bg-on-background/80 backdrop-blur-md border-b border-secondary/20 dark:border-secondary-fixed-variant/20 shadow-sm flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+            Frutos de la Costa
+        </div>
+<div class="flex gap-md">
+<a class="text-on-surface-variant dark:text-outline-variant font-headline-md text-headline-md font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 duration-200" href="#">Catálogo</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-headline-md text-headline-md font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 duration-200" href="#">Ofertas</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary font-headline-md text-headline-md font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 duration-200" href="#">Localidades</a>
+</div>
+<div class="flex gap-sm text-primary dark:text-primary-fixed-dim">
+<button class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+</button>
+<button class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- TopAppBar (Mobile) -->
+<header class="md:hidden fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-secondary/20 px-4 py-3 flex justify-between items-center">
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-primary">
+            Frutos de la Costa
+        </div>
+<div class="flex gap-3 text-primary">
+<button><span class="material-symbols-outlined">shopping_cart</span></button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-4 md:px-gutter mt-6 md:mt-12 space-y-lg">
+<!-- Search Bar Section -->
+<section class="w-full">
+<div class="relative max-w-2xl mx-auto">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-primary">search</span>
+</div>
+<input class="w-full pl-12 pr-4 py-3 bg-[#E1F5FE] border-none rounded-full text-on-surface-variant font-body-md focus:ring-2 focus:ring-primary focus:outline-none placeholder:text-secondary shadow-ambient transition-all" placeholder="Buscar frutas, verduras..." type="text"/>
+</div>
+</section>
+<!-- Category Bubbles (Horizontal Scroll) -->
+<section class="w-full">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Categorías</h2>
+<div class="flex overflow-x-auto hide-scrollbar gap-4 pb-2 snap-x">
+<button class="flex flex-col items-center min-w-[80px] snap-start group">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-2 shadow-ambient group-hover:scale-105 transition-transform border border-transparent group-hover:border-primary">
+<img class="w-full h-full object-cover rounded-full" data-alt="A macro shot of vibrant, fresh citrus fruits sliced open, showing juicy segments. Light-mode aesthetic, crisp and clean lighting, coastal modern style, bright orange and yellow tones against a soft white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3aBCf3OxpModTihHlJ9iqSGs0Kw-Y1wyKrDmQMZRvHqA-60DT9m6lui0PfTJN8OKe-a2N_f5-0SHrhilpMuCzIG-JP-GVZEHoH3dNVYdIG5226CZO-7hgC6KiL6zWZNzmkQsowjgTFqdsNtfODMC1OVxCVjy41TiRVp350B3BNMItNbaQig7iqZKEpxljBpLpK0oOY29F4mD--NAYVULnNZLCZExifQrBhQlnaRX440vUv6_152fiLA"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Frutas</span>
+</button>
+<button class="flex flex-col items-center min-w-[80px] snap-start group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-2 shadow-ambient group-hover:scale-105 transition-transform border border-transparent group-hover:border-primary">
+<img class="w-full h-full object-cover rounded-full" data-alt="Fresh, crisp leafy greens and crisp vegetables arranged elegantly. Light-mode aesthetic, coastal modern style, highlighting the organic texture and rich green hues against a clean, minimal surface with soft ambient shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPyfXBe91BEM6I2eJjJR3ddWp-yfgTInP6bqA3UDQvzawfxpNFsgm4UJ5L920a1pLyAIIf1qexOs0IHPHJSsv7ymt4mI66f_3G1jvg42FHU1iCTtRm88KYkTDUs-kcYrXPvSDyAQHVLQSfZOrMzFdxrjDSA-_3o4O10JJz47yNWulLEKnAQsHmyKh0RJVZ5DDmFYXhqUwSoePU-H7whHFYVY9wDzCk7nLKjedAk6g502m-xihfno5jng"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Verduras</span>
+</button>
+<button class="flex flex-col items-center min-w-[80px] snap-start group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-2 shadow-ambient group-hover:scale-105 transition-transform border border-transparent group-hover:border-primary">
+<img class="w-full h-full object-cover rounded-full" data-alt="A curated handful of premium mixed nuts and dried fruits resting on a light wooden surface. Light-mode aesthetic, coastal modernist feel, warm earthy tones complementing the clean, airy, high-key lighting environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXqSzN2W63f13CqPYla_V6gkPvt2MiHTShlanShbwvEQlmVOzgYvcEdo9rnWSuJ7DjuxTpipV2DAFhdkMBf-Ck5FqJX9c-V3zQD9lnvMc_vPeSMZWossL3AhOjefkJh-_gyFikx7JN0lVf_p4GhOaCZPj7ZHBEJJ_UY83uAJw8dsOtj5n-Hq3bi7wnw3_lg2DFxhnOodDUJRlJTkcmsIwwwPt-sLcpHgIazKQlZWdgEU4PyHUAYK3_gw"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Frutos Secos</span>
+</button>
+<button class="flex flex-col items-center min-w-[80px] snap-start group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-2 shadow-ambient group-hover:scale-105 transition-transform border border-transparent group-hover:border-primary">
+<img class="w-full h-full object-cover rounded-full" data-alt="A small jar of artisanal local honey and some fresh herbs. Light-mode aesthetic, coastal modern style, evoking purity and local sourcing, bright and translucent atmosphere with subtle blue tinted shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnNnLtxRSI-FtCDQHT5Kx1xqiaveuAdNmsyE7HBBXP5pzjDhgTuTnrzG1AzC5Rei30fdhvTITD7uVt7v9rj91TCnWceRmiU1NCaYj8QjwcmlJXKI-JxtSDzcTd38ySsyY8-ES4yrXP9CFyYKHEdVb8_aYIdHqi01_fx6BoIGI9jE9hddyZKYrfifea3V5V8ugnjYjPlQ4iD8N0FYMMiz-2R1VS6Bf7AkDiCw_LSvaNyuwaUxh2k0rYCQ"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Despensa</span>
+</button>
+<button class="flex flex-col items-center min-w-[80px] snap-start group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-2 shadow-ambient group-hover:scale-105 transition-transform border border-transparent group-hover:border-primary">
+<span class="material-symbols-outlined text-secondary" style="font-size: 32px;">more_horiz</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Ver Todo</span>
+</button>
+</div>
+</section>
+<!-- Ofertas de la Semana (Horizontal Cards) -->
+<section class="w-full">
+<div class="flex justify-between items-end mb-4">
+<h2 class="font-headline-md text-headline-md text-primary">Ofertas de la Semana</h2>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#">Ver todas</a>
+</div>
+<div class="flex flex-col md:flex-row gap-4 overflow-x-auto hide-scrollbar pb-4">
+<!-- Horizontal Card 1 -->
+<div class="flex-none w-full md:w-[400px] bg-surface rounded-xl p-3 shadow-ambient flex gap-4 items-center group cursor-pointer hover:shadow-md transition-shadow border border-transparent hover:border-secondary-container">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 relative bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A vibrant cluster of fresh local strawberries in a simple wooden basket. Light-mode aesthetic, coastal modernist style, bright red colors popping against a clean, light background with very soft, slightly blue ambient shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWXklzz31JnnjvEBC4UDPAyDvb_xIZu_Uv1yrMTOUeb8hT9OKgjZSjNi5ScZ7tMpuJhRsaX_Bh9FJy6o26M_yTxMJmkX72Gc6TqniVJqd9oFxS7YA2DeWgDqkAu0xSoaqix36cAzJrYk0tBFMOqRdtYis8JBK_rDv785oykWusbjWhAwjBpIrqgMjwVz_9IuLz1VYodMDG5RHAvnmlOECC7okfSLAQeQ9YVR7H2nwJ5lVr_tKoUilOiA"/>
+<div class="absolute top-1 left-1 bg-[#E1F5FE] text-primary text-xs font-bold px-2 py-0.5 rounded-full">
+                            -20%
+                        </div>
+</div>
+<div class="flex-grow flex flex-col justify-center">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold line-clamp-1">Frutillas Locales</h3>
+<div class="text-sm text-on-surface-variant mb-1">500g</div>
+<div class="flex items-center gap-2">
+<span class="font-price-tag text-price-tag text-primary">$2.500</span>
+<span class="text-sm text-outline line-through">$3.100</span>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-primary flex items-center justify-center flex-shrink-0 hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Horizontal Card 2 -->
+<div class="flex-none w-full md:w-[400px] bg-surface rounded-xl p-3 shadow-ambient flex gap-4 items-center group cursor-pointer hover:shadow-md transition-shadow border border-transparent hover:border-secondary-container">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 relative bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A bunch of pristine, bright green asparagus spears laid neatly on a white surface. Light-mode aesthetic, coastal modernist look, crisp details, soft high-key lighting enhancing the natural freshness and vibrant green color." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH7LVuWqTaulz0S39yoVw-tmCp3Bscl14-65rbL_BbtoA8N4sOnluBUqzLBPX31Fg7he8tLxHvFGI7pHuPxnMNNSwpaU1gME_zOH6Jr0Ui_JiohaOKHeEu5aqOVyxA1LIVzc5udQedcTYagewHJN7C93vmDxgeWHWBQv1U1KzZytkZWFIfYsV6-uwbbJyyRNCPpCI0JHRX0qcg04LcJkYwkFIxyS8vwdqqYZysap7yFdN8jZ4sPObDyA"/>
+<div class="absolute top-1 left-1 bg-[#E1F5FE] text-primary text-xs font-bold px-2 py-0.5 rounded-full">
+                            Oferta
+                        </div>
+</div>
+<div class="flex-grow flex flex-col justify-center">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold line-clamp-1">Espárragos Frescos</h3>
+<div class="text-sm text-on-surface-variant mb-1">Atado</div>
+<div class="flex items-center gap-2">
+<span class="font-price-tag text-price-tag text-primary">$1.800</span>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-primary flex items-center justify-center flex-shrink-0 hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Productos Destacados (Grid) -->
+<section class="w-full">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Destacados</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-md">
+<!-- Product Card 1 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-ambient group flex flex-col">
+<div class="relative h-40 md:h-48 bg-surface-container-low overflow-hidden p-4">
+<img class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500" data-alt="Perfectly ripe, bright yellow lemons with fresh green leaves attached. Light-mode aesthetic, coastal modern style, evoking freshness and zest, clean white background with a subtle, cool blue-tinted drop shadow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCurcOqoEJIHnjMDDVdRFQ0VuPEEGO_T_luMGSELkIgQUNKL1-iNzAMMuJ0DTTXFnYeH0eQU4RseiUhB6eFyZzGlzyMCPxrh2Qla-eKA1Zamyqx0CtGKgGAUNnJblqVbLLyHj4nXafBQ2DLKqb2Q0Yf8lmecU4m_Asisp2I0YXX83gypvCu-ZW6B-889v5V6fEJ-zXFcCZcm-lUdkJGb_YsA7-IydPi868GuHey5PZEY0yuz9i08PJAnA"/>
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="bg-[#E8F5E9] text-[#2E7D32] text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">eco</span> Orgánico
+                            </span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow bg-white">
+<div class="text-xs text-secondary mb-1">Cítricos</div>
+<h3 class="font-body-md text-body-md text-on-surface font-semibold mb-2 line-clamp-2 flex-grow">Limón Sutil Premium</h3>
+<div class="flex items-end justify-between mt-auto">
+<div>
+<div class="font-price-tag text-price-tag text-primary">$3.200</div>
+<div class="text-xs text-on-surface-variant">x 1 kg</div>
+</div>
+<button class="bg-tertiary text-on-tertiary px-3 py-1.5 rounded-lg font-label-md text-label-md hover:bg-tertiary-container transition-colors shadow-sm">
+                                Agregar
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-ambient group flex flex-col">
+<div class="relative h-40 md:h-48 bg-surface-container-low overflow-hidden p-4">
+<img class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500" data-alt="A rustic wooden bowl filled with fresh, dark green Hass avocados. Light-mode aesthetic, coastal modern design, soft natural lighting highlighting the textured skin of the avocados against a minimalist, bright surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZh1hQ9nVQeSSIyeXVMG-ZrFX1s8ybs-ssyNg35TxudRD6IHzeni_1Ml6AuK7zO4sOWCTDJoX3o6ThWzAOTPlnDQ_w4pwPfAXyzf-OSlqKR_JrXkrP2KsMbbM-CZpm2HPwytBJV-ukvKEALsO6x68gOfGnHLB-PNFJgjyA0kPs7X9gwM3fi8IiuJuINvGCW8GD-Eq0P2J3bqZM2OJ1VhaR4mc-l1_eMow9mqhv1iiNPBridHBst0SkLA"/>
+</div>
+<div class="p-4 flex flex-col flex-grow bg-white">
+<div class="text-xs text-secondary mb-1">Frutas</div>
+<h3 class="font-body-md text-body-md text-on-surface font-semibold mb-2 line-clamp-2 flex-grow">Palta Hass Extra</h3>
+<div class="flex items-end justify-between mt-auto">
+<div>
+<div class="font-price-tag text-price-tag text-primary">$5.500</div>
+<div class="text-xs text-on-surface-variant">x 1 kg</div>
+</div>
+<button class="bg-tertiary text-on-tertiary px-3 py-1.5 rounded-lg font-label-md text-label-md hover:bg-tertiary-container transition-colors shadow-sm">
+                                Agregar
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-ambient group flex flex-col">
+<div class="relative h-40 md:h-48 bg-surface-container-low overflow-hidden p-4">
+<img class="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500" data-alt="A vibrant assortment of mixed cherry tomatoes in red, yellow, and dark purple hues. Light-mode aesthetic, coastal modern flavor, high-key lighting, crisp and juicy appearance, clean airy background with ambient shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChfTUcyrqM0KC44vwruJAAQuyEVms060dGKD4OLS_wBhDhFs3B2SWTVkt-cznEW3U5ru9GRUS_kRFqBOGlDGKqoinmdUW-izk4LVSn_vQYf9CAXhaANUicVUY0p4u1q7ZIyZHK5IGUFGLVWzoOXc9Hva4Mlx7C13wNo1u0YYaGNO0cUSIAwo_5besPOrie4iVImSq25w-5qjLUI8j1cimi8P5P9wgfNassbCY8UHPZsIxVj-GSX4U8Vg"/>
+</div>
+<div class="p-4 flex flex-col flex-grow bg-white">
+<div class="text-xs text-secondary mb-1">Verduras</div>
+<h3 class="font-body-md text-body-md text-on-surface font-semibold mb-2 line-clamp-2 flex-grow">Tomate Cherry Mix</h3>
+<div class="flex items-end justify-between mt-auto">
+<div>
+<div class="font-price-tag text-price-tag text-primary">$1.900</div>
+<div class="text-xs text-on-surface-variant">x 250g</div>
+</div>
+<button class="bg-tertiary text-on-tertiary px-3 py-1.5 rounded-lg font-label-md text-label-md hover:bg-tertiary-container transition-colors shadow-sm">
+                                Agregar
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container-lowest/90 dark:bg-inverse-surface/90 backdrop-blur-lg border-t border-secondary-container dark:border-outline-variant shadow-[0_-4px_12px_rgba(0,91,150,0.08)]">
+<div class="flex justify-around items-center p-2 pb-safe">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-variant active:scale-90 transition-transform p-2 rounded-lg">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-md text-[10px]">Inicio</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-full px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">category</span>
+<span class="font-label-md text-[10px]">Categorías</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-variant active:scale-90 transition-transform p-2 rounded-lg">
+<span class="material-symbols-outlined mb-1">shopping_basket</span>
+<span class="font-label-md text-[10px]">Carrito</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-variant active:scale-90 transition-transform p-2 rounded-lg">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-md text-[10px]">Perfil</span>
+</button>
+</div>
+</nav>
+
+<div style="text-align: center; padding: 20px; background-color: #f1f5f9; color: #475569; font-family: 'Inter', sans-serif; font-size: 14px; border-top: 1px solid #e2e8f0; margin-top: 40px;">
+    <strong>Demo realizada por <a href="https://ppvsoluciones.cl" target="_blank" style="color: #3b82f6; text-decoration: none;">ppvsoluciones.cl</a></strong>
+</div>
+
+
+<a href="opciones_diseno.html" style="position: fixed; bottom: 80px; left: 20px; background: #0f172a; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; z-index: 9999; font-family: 'Inter', sans-serif; font-weight: 600; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 8px;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Volver al Menú
+</a>
+
+</body></html>
