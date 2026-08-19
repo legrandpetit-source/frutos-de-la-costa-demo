@@ -146,12 +146,39 @@
 <button class="p-2 hover:bg-secondary-container/20 dark:hover:bg-secondary-container/10 rounded-full transition-all text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim" onclick="toggleCart()">
 <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
 </button>
+
 <button class="p-2 hover:bg-secondary-container/20 dark:hover:bg-secondary-container/10 rounded-full transition-all text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim hidden md:block">
 <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+<button class="p-2 md:hidden hover:bg-secondary-container/20 dark:hover:bg-secondary-container/10 rounded-full transition-all text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
 </button>
 </div>
 </div>
 </header>
+
+<!-- Mobile Menu Drawer -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-[60] hidden transition-opacity duration-300 opacity-0" id="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+<aside class="bg-surface dark:bg-surface-dim text-primary dark:text-primary-fixed-dim font-label-md text-label-md fixed inset-y-0 left-0 w-80 shadow-2xl bg-surface-container-low dark:bg-surface-container-lowest backdrop-blur-xl shadow-xl flex flex-col h-full p-md space-y-4 z-[70] transform -translate-x-full transition-transform duration-300 ease-out" id="mobile-menu-drawer">
+<div class="flex justify-between items-center mb-4 border-b border-outline-variant/20 pb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Menú</h2>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-highest rounded-full p-2 transition-all" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<nav class="flex-grow flex flex-col space-y-4">
+<a class="text-primary font-headline-md text-headline-md" href="#">Categorías</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline-md text-headline-md" href="#">Ofertas</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline-md text-headline-md" href="#">Productores</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-headline-md text-headline-md" href="#">Nosotros</a>
+<a class="text-tertiary flex items-center gap-2 font-headline-md text-headline-md" href="opciones_diseno.html">
+    <span class="material-symbols-outlined" style="font-size: 24px;">palette</span> Catálogo de Diseños
+</a>
+</nav>
+</aside>
+
 <!-- Main Content -->
 <main class="flex-grow w-full max-w-container-max mx-auto px-gutter md:px-[48px] lg:px-gutter xl:px-[48px] pt-md pb-xl">
 <!-- Hero Section -->
@@ -441,5 +468,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
+
+
+    <script>
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobile-menu-drawer');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            
+            if (drawer && overlay) {
+                if (drawer.classList.contains('-translate-x-full')) {
+                    drawer.classList.remove('-translate-x-full');
+                    overlay.classList.remove('hidden');
+                    setTimeout(() => {
+                        overlay.classList.remove('opacity-0');
+                        overlay.classList.add('opacity-100');
+                    }, 10);
+                } else {
+                    drawer.classList.add('-translate-x-full');
+                    overlay.classList.remove('opacity-100');
+                    overlay.classList.add('opacity-0');
+                    setTimeout(() => {
+                        overlay.classList.add('hidden');
+                    }, 300);
+                }
+            }
+        }
+    </script>
 
 </body></html>
