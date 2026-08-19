@@ -377,4 +377,116 @@
         }
     </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Show toast for pending links
+    document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.showToast("✨ Módulo disponible en la versión final del sistema", "#475569");
+        });
+    });
+
+    let cartCount = 0;
+    let cartTotal = 0;
+    const cartItems = [];
+    const cartContainer = document.getElementById('cart-items-container');
+    const checkoutBtn = document.getElementById('checkout-btn');
+
+    function updateCartUI() {
+        if (!cartContainer) return;
+        
+        if (cartItems.length === 0) {
+            cartContainer.innerHTML = '<div class="text-center text-on-surface-variant mt-8"><span class="material-symbols-outlined" style="font-size: 48px; opacity: 0.5;">shopping_cart</span><p class="mt-2">Tu canasta está vacía.</p></div>';
+            if(checkoutBtn) checkoutBtn.textContent = 'Finalizar Compra ($0 CLP)';
+            return;
+        }
+
+        cartContainer.innerHTML = '';
+        cartItems.forEach((item, index) => {
+            const itemEl = document.createElement('div');
+            itemEl.className = 'flex items-center gap-3 bg-surface-container-low p-3 rounded-xl shadow-sm border border-outline-variant/10';
+            itemEl.innerHTML = `
+                <div class="w-16 h-16 rounded-md overflow-hidden flex-shrink-0 bg-surface">
+                    <img src="${item.img}" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex-grow">
+                    <h4 class="font-bold text-sm text-on-surface line-clamp-1">${item.name}</h4>
+                    <p class="text-primary font-bold text-sm mt-1">$${item.price.toLocaleString('es-CL')}</p>
+                </div>
+                <button class="text-error hover:bg-error-container rounded-full p-1" onclick="window.removeCartItem(${index})">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
+                </button>
+            `;
+            cartContainer.appendChild(itemEl);
+        });
+
+        if (checkoutBtn) checkoutBtn.textContent = `Finalizar Compra ($${cartTotal.toLocaleString('es-CL')} CLP)`;
+    }
+
+    // Expose remove function to global scope
+    window.removeCartItem = function(index) {
+        cartTotal -= cartItems[index].price;
+        cartCount--;
+        cartItems.splice(index, 1);
+        updateCartUI();
+        updateBadges();
+    };
+
+    function updateBadges() {
+        const badges = document.querySelectorAll('.bg-error, .bg-red-500, .bg-primary');
+        badges.forEach(badge => {
+            const txt = badge.textContent.trim();
+            if(txt.length <= 2 && !isNaN(parseInt(txt)) || txt === "") {
+                badge.textContent = cartCount;
+            }
+        });
+    }
+
+    // Capture add to cart events
+    document.querySelectorAll('button').forEach(btn => {
+        const isAddBtn = btn.textContent.toLowerCase().includes('agregar') || 
+                         btn.getAttribute('aria-label') === 'Agregar al carrito' || 
+                         (btn.querySelector('span') && btn.querySelector('span').textContent === 'add');
+                         
+        if (isAddBtn) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Traverse up to find product details
+                const card = btn.closest('.group') || btn.closest('.bg-surface') || btn.closest('div');
+                if (!card) return;
+                
+                const titleEl = card.querySelector('h3, .font-headline-md');
+                const priceEl = card.querySelector('.text-primary, .font-price-tag');
+                const imgEl = card.querySelector('img');
+                
+                if (titleEl && priceEl && imgEl) {
+                    const name = titleEl.textContent.trim();
+                    let priceText = priceEl.textContent.trim().replace(/[^0-9]/g, '');
+                    const price = parseInt(priceText) || 0;
+                    const img = imgEl.src;
+                    
+                    cartItems.push({name, price, img});
+                    cartCount++;
+                    cartTotal += price;
+                    
+                    window.showToast("🛒 " + name + " agregado al carrito!", "#10b981");
+                    updateCartUI();
+                    updateBadges();
+                    
+                    // Optionally open cart
+                    const drawer = document.getElementById('cart-drawer');
+                    if (drawer && drawer.classList.contains('translate-x-full')) {
+                        // toggleCart(); 
+                    }
+                }
+            });
+        }
+    });
+
+    // Initial render
+    updateCartUI();
+});
+</script>
 </body></html>
